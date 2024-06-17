@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Foyermembres</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foyermembres.each do |foyermembre| %>
+      <tr>
+        <td><%= link_to 'Show', foyermembre %></td>
+        <td><%= link_to 'Edit', edit_foyermembre_path(foyermembre) %></td>
+        <td><%= link_to 'Destroy', foyermembre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Foyermembre', new_foyermembre_path %>

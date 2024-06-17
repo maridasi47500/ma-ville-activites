@@ -1,0 +1,30 @@
+<a href="/mespapiers">mes papiers</a>
+
+<div class="moncompte">
+MON COMPTE
+</div>
+<div class="macarte">
+<img src="/uploads/<%=current_user.photo%>" class="mapic"/>
+Représentant
+<div class="monom">
+<%=current_user.prenom%>
+<%=current_user.nomusuel%>
+</div>
+<div class="monadres">
+
+<%=current_user.adresse%>
+</div>
+<div class="monemail">
+
+
+<%=current_user.email%>
+</div>
+<div class="liens">
+
+<a href="/users/edit">Profil</a>
+<a href="/users/edit">Identifiants</a>
+
+<a href="/myuser/family">Ma famille</a>
+</div>
+</div>
+

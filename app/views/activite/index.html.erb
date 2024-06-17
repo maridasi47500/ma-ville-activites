@@ -1,0 +1,28 @@
+<h1>Activités</h1>
+<p><%= link_to "New article", new_article_path %></p>
+
+<div id="activites">
+  <%=link_to_unless_current("sport","/activite/sport") do
+    (link_to("sport","/activite/sport", {class:"current"}))
+  end%>
+  <%=link_to_unless_current("musique","/activite/musique") do
+    (link_to("musique","/activite/musique", {class:"current"}))
+  end%>
+</div>
+<div class="mesarticles">
+  <%if @articles.length > 0%>
+      <% @articles.each do |article| %>
+        <div class="box">
+            <img src="https://via.placeholder.com/60x60">
+            <div>
+              <span style=""><%=article.title%></span>
+              <span style=""><%=link_to "Lire la suite de l'article", article%></span>
+            </div>
+
+        </div>
+      <%end%>
+                          <%else%>
+<p><%=image_tag(asset_path("illustration_Mes-activites"))%></p>
+                              <% end %>
+
+</div>

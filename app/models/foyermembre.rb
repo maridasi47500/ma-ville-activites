@@ -1,0 +1,2 @@
+class Foyermembre < Person
+end

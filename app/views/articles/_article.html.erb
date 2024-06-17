@@ -1,0 +1,16 @@
+<div id="<%= dom_id article %>">
+  <h1>
+    <%= article.title %>
+  </h1>
+
+  <p>
+  <img src="/uploads/<%= article.pic %>" max-height="200px" />
+  </p>
+
+  <p>
+    <strong>Text:</strong>
+    <%= simple_format(article.text) %>
+  </p>
+
+
+</div>

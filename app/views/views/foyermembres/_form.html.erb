@@ -1,0 +1,17 @@
+<%= form_with(model: foyermembre, local: true) do |form| %>
+  <% if foyermembre.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(foyermembre.errors.count, "error") %> prohibited this foyermembre from being saved:</h2>
+
+      <ul>
+        <% foyermembre.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

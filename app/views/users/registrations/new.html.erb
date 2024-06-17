@@ -1,0 +1,73 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+  <div class="field">
+    <%= f.label :civilite %><br />
+    <%= f.text_field :civilite %>
+  </div>
+  <div class="field">
+    <%= f.label :nomdenaissnce %><br />
+    <%= f.text_field :nomdenaissance %>
+  </div>
+  <div class="field">
+    <%= f.label :nomusuel %><br />
+    <%= f.text_field :nomusuel %>
+  </div>
+  <div class="field">
+    <%= f.label :prenom %><br />
+    <%= f.text_field :prenom %>
+  </div>
+  <div class="field">
+    <%= f.label :datedenaissance %><br />
+    <%= f.text_field :datedenaissance %>
+  </div>
+  <div class="field">
+    <%= f.label :dptnaissance %><br />
+    <%= f.text_field :dptnaissance %>
+  </div>
+  <div class="field">
+    <%= f.label :communenaissance %><br />
+    <%= f.text_field :communenaissance %>
+  </div>
+  <div class="field">
+    <%= f.label :paysnaissance %><br />
+    <%= f.text_field :paysnaissance %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :tel %><br />
+    <%= f.telephone_field :tel %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile %><br />
+    <%= f.telephone_field :mobile %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "users/shared/links" %>

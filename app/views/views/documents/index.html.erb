@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mes papiers</h1>
+
+Nombre de pièces 0 / 10
+
+Vous pouvez y accéder 24h/24 et 7j/7 à partir de votre compte depuis votre ordinateur, votre smartphone ou votre tablette.
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @documents.each do |document| %>
+      <tr>
+        <td><%= render document %></td>
+        <td><%= link_to 'Edit', edit_document_path(document) %></td>
+        <td><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Document', new_document_path %>

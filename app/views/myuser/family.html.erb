@@ -1,0 +1,40 @@
+nouevlles personnes
+
+    Ma demande
+
+    Des champs sont non renseignés ou mal renseignés, merci de corriger votre saisie.
+<div id="personnes">
+<div>
+  <p class="sometitle">
+    Titulaire du compte
+  </p>
+    <%=current_user.prenom%>
+    <img src="/uploads/<%=current_user.photo%>" class="mapic"/>
+</div>
+<div>
+  <p class="sometitle">
+  Co-représentant</p>
+    <%=render as: :person, partial:"people/person",collection:current_user.corepresentants%>
+<%= button_to 'ajouter', Corepresentant.new(user_id:current_user.id), method: :create,params: {corepresentant:Corepresentant.new(user_id:current_user.id).as_json}, data: { confirm: 'Are you sure?' } %>
+</div>
+
+<div>
+
+  <p class="sometitle">
+  Membres foyer
+  </p>
+    <%=render as: :person, partial:"people/person",collection: current_user.foyermembres%>
+<%= button_to 'ajouter', Foyermembre.new(user_id:current_user.id), method: :create,params:{foyermembre:Foyermembre.new(user_id:current_user.id).as_json}, data: { confirm: 'Are you sure?' } %>
+</div>
+<div>
+  <p class="sometitle">
+  Contacts
+  
+
+  </p>
+    <%=render as: :person, partial:"people/person",collection: current_user.contacts%>
+<%= button_to 'ajouter', Contact.new(user_id:current_user.id), method: :create,params:{contact:Contact.new(user_id:current_user.id).as_json}, data: { confirm: 'Are you sure?' } %>
+</div>
+</div>
+
+<div class="monformulaire"></div>

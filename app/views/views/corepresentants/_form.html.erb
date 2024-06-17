@@ -1,0 +1,17 @@
+<%= form_with(model: corepresentant, local: true) do |form| %>
+  <% if corepresentant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(corepresentant.errors.count, "error") %> prohibited this corepresentant from being saved:</h2>
+
+      <ul>
+        <% corepresentant.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

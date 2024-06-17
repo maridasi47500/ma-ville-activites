@@ -1,0 +1,2 @@
+class Sport < Article
+end

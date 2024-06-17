@@ -1,0 +1,81 @@
+<%= form_with(model: person, local: true) do |form| %>
+  <% if person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+        <% person.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prenom %>
+    <%= form.text_field :prenom %>
+  </div>
+  <div class="field">
+    <%= form.label :civilite %>
+    <%= form.text_field :civilite %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nomdusage %>
+    <%= form.text_field :nomdusage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nomdefamille %>
+    <%= form.text_field :nomdefamille %>
+  </div>
+
+  <div class="field">
+    <%= form.label :communnenaissance %>
+    <%= form.text_field :communnenaissance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paysnaissance %>
+    <%= form.text_field :paysnaissance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dptnaissance %>
+    <%= form.text_field :dptnaissance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tel %>
+    <%= form.text_field :tel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mobile %>
+    <%= form.text_field :mobile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :observations %>
+    <%= form.text_area :observations %>
+  </div>
+
+  <div class="field">
+    <%= form.label :piecej %>
+    <%= form.text_field :piecej %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

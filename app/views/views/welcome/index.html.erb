@@ -1,0 +1,17 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">mon compte</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Je n'ai pas de compte</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><%=render template:"users/sessions/new", locals:{resource_name: :user,resource: @user}%></div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><p>
+
+Créez votre compte personnel qui vous donnera accès à vos démarches et autres fonctionnalités facilitant votre relation avec la mairie.
+</p>
+<a href="/creationdemoncompte">créer mon compte</a></div>
+</div>
+

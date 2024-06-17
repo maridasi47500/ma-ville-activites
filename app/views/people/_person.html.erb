@@ -1,0 +1,15 @@
+<div class="person" onclick="$.ajax({url:'/people/<%=person.id%>/edit',success:function(data){$('.monformulaire').html(data);}});">
+  <img src="" class="mapic" />
+  <span><%=person.prenom%></span>
+  <span>
+<%case person.type%>
+<%when "Corepresentant"%>
+  Co representant
+<%when "Foyermembre"%>
+  Membre du foyer
+<%when "Contact"%>
+  Contact
+<%end%>
+  </span>
+
+</div>

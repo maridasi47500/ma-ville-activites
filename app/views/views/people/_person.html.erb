@@ -1,0 +1,5 @@
+<div class="person" onclick="$.ajax({url:'/people/<%=person.id%>/edit',success:function(data){$('.monformulaire').html(data);}});">
+<%=person.prenom%>
+<%=person.type%>
+
+</div>

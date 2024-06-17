@@ -1,0 +1,2 @@
+class Musique < Article
+end
